@@ -16,6 +16,26 @@ Get CAN frame's ID : 0x18fe4eec (419319532)
 PGN : 0xfe4e(65102)
 ```
 
+# PGN2Canid
+PGN(Parameter Group Number) transport to Can frame's ID.
+
+Example Output:
+
+```
+Please input PGN Dec : 65102
+Get PGN Dec : 65102 (0x0000fe4e)
+Please input TA(Target ADDR) as PS : 78
+Please input SA(Source ADDR) : 
+236
+Please input P(Priority) : 
+6
+|---|-|-|--------|--------|--------|
+|   | | |        |        |        |
+| P |R|D|   PF   |   PS   |   SA   |
+|   | |P|        |        |        |
+  6  0 0   254      78       236    
+CAN ID : 0x18fe4eec(419319532)
+```
 # Contact 
 
 email: sonechaochao@gmail.com
