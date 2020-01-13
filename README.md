@@ -7,7 +7,9 @@
 # Entry into the proj dir
 $ cd [PROJ_DIR]
 # gcc the id2pgn.c(can frame's id convert to pgn) or pgn2id.c(pgn convert to can frame's id)
-$ gcc [C_FILE]
+$ gcc [C_FILE] -o [OUTPUT_FILE_NAME]
+#run the code
+$ ./[OUTPUT_FILE_NAME]
 ```
 
 ## Canid2PGN
