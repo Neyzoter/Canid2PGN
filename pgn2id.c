@@ -29,9 +29,9 @@ int main() {
     {
         PS = GE;
     }
-    printf("Please input SA(Source ADDR) : \n");
+    printf("Please input SA(Source ADDR) : ");
     scanf("%d", &SA); 
-    printf("Please input P(Priority) : \n");
+    printf("Please input P(Priority) : ");
     scanf("%d", &P);
     printf("|---|-|-|--------|--------|--------|\n");
     printf("|   | | |        |        |        |\n");
