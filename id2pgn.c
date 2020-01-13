@@ -13,7 +13,7 @@ int main() {
     uint PS; // 特定PDU
     uint SA; // 源地址 
     uint GE = 0; // 群拓展
-    uint PGN = 0;
+    uint PGN = 0;// 参数群编号
     printf("Please input CAN frame's Extended ID : 0x");
     scanf("%08x",&id);
     printf("Get CAN frame's ID : 0x%08x (%d)\n",id, id);
