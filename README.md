@@ -25,10 +25,8 @@ Example Output:
 Please input PGN Dec : 65102
 Get PGN Dec : 65102 (0x0000fe4e)
 Please input TA(Target ADDR) as PS : 78
-Please input SA(Source ADDR) : 
-236
-Please input P(Priority) : 
-6
+Please input SA(Source ADDR) : 236
+Please input P(Priority) : 6
 |---|-|-|--------|--------|--------|
 |   | | |        |        |        |
 | P |R|D|   PF   |   PS   |   SA   |
