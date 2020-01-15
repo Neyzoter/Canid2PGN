@@ -22,14 +22,16 @@ FYI, if PF > 240, then GE equals to PS(PDU Special), otherwise, GE equals to zer
 Example Output:
 
 ```
-Please input CAN frame's Extended ID : 0x18fe4eec
-Get CAN frame's ID : 0x18fe4eec (419319532)
+Please input CAN frame's Extended ID : 0x18feae30
+Get CAN frame's ID : 0x18feae30 (419343920)
 |---|-|-|--------|--------|--------|
 |   | | |        |        |        |
 | P |R|D|   PF   |   PS   |   SA   |
 |   | |P|        |        |        |
-  6  0 0   254      78       236    
-PGN : 0xfe4e(65102)
+  6  0 0   254      174      48     
+PF >= 240 , so GE = PS : 174
+PGN : 0xfeae(65198)
+
 ```
 
 ## PGN2Canid
@@ -40,17 +42,18 @@ PGN(Parameter Group Number) transport to Can frame's ID.
 Example Output:
 
 ```
-Please input PGN Dec : 65102
-Get PGN Dec : 65102 (0x0000fe4e)
-Please input TA(Target ADDR) as PS : 78
-Please input SA(Source ADDR) : 236
+Please input PGN Dec : 65198
+Get PGN Dec : 65198 (0x0000feae)
+PF >= 240 , so PS = GE : 174
+Please input SA(Source ADDR) : 48
 Please input P(Priority) : 6
 |---|-|-|--------|--------|--------|
 |   | | |        |        |        |
 | P |R|D|   PF   |   PS   |   SA   |
 |   | |P|        |        |        |
-  6  0 0   254      78       236    
-CAN ID : 0x18fe4eec(419319532)
+  6  0 0   254      174      48     
+CAN ID : 0x18feae30(419343920)
+
 ```
 ## Contact 
 
