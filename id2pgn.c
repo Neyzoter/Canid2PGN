@@ -14,6 +14,7 @@ int main() {
     uint SA; // 源地址 
     uint GE = 0; // 群拓展
     uint PGN = 0;// 参数群编号
+    uint DA; // 目标地址
     printf("Please input CAN frame's Extended ID : 0x");
     scanf("%08x",&id);
     printf("Get CAN frame's ID : 0x%08x (%d)\n",id, id);
@@ -29,10 +30,13 @@ int main() {
     printf("|   | |P|        |        |        |\n");
     printf("  %1d  %-1d %-1d   %-6d   %-6d   %-6d \n",P,R,DP,PF,PS,SA);
     // 群拓展根据PF数值决定
-    if (PF > GE_THRESHOLD) {
+    if (PF >= GE_THRESHOLD) {
         GE = PS;
+        printf("PF >= %d , so GE = PS : %d\n", GE_THRESHOLD, GE);
     } else {
         GE = 0;
+        DA = PS;
+        printf("PF < %d , so GE : %d, DA = PS : %d\n", GE_THRESHOLD, GE , DA);
     }
     PGN = 0;
     PGN |= (GE << GE_SHIFT_PGN) | (PF << PF_SHIFT_PGN) | (DP << DP_SHIFT_PGN) | (R << R_SHIFT_PGN);

@@ -21,13 +21,14 @@ int main() {
     PF = (PGN & PF_MASK_PGN)>>PF_SHIFT_PGN;
     DP = (PGN & DP_MASK_PGN)>>DP_SHIFT_PGN;
     R  = (PGN & R_MASK_PGN) >>R_SHIFT_PGN;
-    if (PF > GE_THRESHOLD)
-    {
-        printf("Please input TA(Target ADDR) as PS : ");
-        scanf("%d",&PS);
-    } else
+    if (PF >= GE_THRESHOLD)
     {
         PS = GE;
+        printf("PF >= %d , so PS = GE : %d\n", GE_THRESHOLD, PS);
+    } else {
+        printf("PF < %d\n",GE_THRESHOLD);
+        printf("Please input TA(Target ADDR) as PS : ");
+        scanf("%d",&PS);
     }
     printf("Please input SA(Source ADDR) : ");
     scanf("%d", &SA); 
