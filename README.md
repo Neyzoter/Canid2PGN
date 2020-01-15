@@ -17,7 +17,7 @@ $ ./[OUTPUT_FILE_NAME]
 
 Can frame's ID transport to PGN(Parameter Group Number).PGN is consist of R(Reserved), DP(Data Page), PF(PDU Format), GE(Group Extension).
 
-FYI, if PF > 240, then GE equals to PS(PDU Special), otherwise, GE equals to zero(ONE byte length).
+FYI, if PF >= 240, then GE equals to PS(PDU Special), otherwise, GE equals to zero(ONE byte length).
 
 Example Output:
 
